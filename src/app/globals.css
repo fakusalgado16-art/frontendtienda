@@ -1,0 +1,39 @@
+/* src/app/globals.css */
+
+/* Ajuste para simular un "zoom" del 75% */
+html {
+  font-size: 75%; /* 1rem será 12px en lugar de 16px */
+  /* Aseguramos que html y body ocupen el 100% del alto y ancho del viewport */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el scroll horizontal */
+  font-family: 'Inter', sans-serif; /* O la fuente que estés usando */
+  color: #333;
+  line-height: 1.5;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reglas CSS para ocultar la barra de desplazamiento en el carrusel */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Para navegadores basados en WebKit (Chrome, Safari, Edge antiguo) */
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+    scrollbar-width: none;  /* Para Firefox */
+}
+
+/* Otros estilos globales que ya tengas */
